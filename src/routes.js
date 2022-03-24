@@ -12,7 +12,7 @@ const routes = express.Router()
 
 routes.get("/tasks", TaskController.index)
 
-routes.get("/task:task_id")
+routes.get("/tasks/:task_id", TaskController.indexPk)
 
 routes.post('/tasks', TaskController.store)
 

@@ -35,9 +35,9 @@ module.exports = {
     async indexPk(req, res) {
 
 
-        const { taks_id } = req.params
+        const { task_id } = req.params
 
-        await Task.findByPk(taks_id)
+        await Task.findByPk(task_id)
             .then(data => {
                 return res.json(data)
             })
