@@ -72,7 +72,7 @@ module.exports = {
         await Task.update(
 
             { description: description, done: done },
-
+            { where: { id: task_id } }
         )
             .then(data => {
                 return res.json(data)
